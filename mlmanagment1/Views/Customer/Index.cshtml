@@ -31,32 +31,39 @@
             @*@Html.DisplayNameFor(model => model.DocumentIsComplete)*@
             Complited
         </th>
+        <th>
+            BirthDate
+        </th>
     </tr>
 
     @foreach (var item in Model)
    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RegistrationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OffertType.ServiceOfered)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DocumentIsComplete)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Detail", "Detail", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RegistrationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OffertType.ServiceOfered)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DocumentIsComplete)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Birthdate)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Detail", "Detail", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+    </td>
+
+</tr>
        
     }
 </table>
