@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-5 {
+        font-size: 33.333px;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #36aff5;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: "Berlin Sans FB";
+      }
+
+      .cls-2, .cls-3 {
+        fill: #05891b;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 16.667px;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: "Comic Sans MS";
+      }
+
+      .cls-6 {
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="M" class="cls-1" x="0.667" y="23.5">M</text>
+  <text id="L" class="cls-2" x="19.5" y="39.333">L</text>
+  <text id="Ass" class="cls-3" x="28.083" y="35.333">Ass</text>
+  <text id="omo" class="cls-4" x="26" y="18.25">omo</text>
+  <text id="S" class="cls-5" x="-5.083" y="58.75">S</text>
+  <text id="ervices" class="cls-6" x="16.917" y="50.25">ervices</text>
+</svg>

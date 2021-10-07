@@ -1,0 +1,76 @@
+﻿@model mlmanagment1.ViewModel.NewCustomerViewModel
+
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+@using (Html.BeginForm("Create", "Customer"))
+{
+
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.LastName)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Customer.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.LastName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.FirstName)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Customer.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.FirstName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.MiddleName)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Customer.MiddleName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.MiddleName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.Birthdate)
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.Birthdate)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.OffertType)
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.Customer.OffertTypeId, new SelectList(Model.OffertType, "Id", "ServiceOfered"), "select offer Type", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.OffertTypeId)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.Comment)
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Customer.Comment, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Customer.Comment)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.DocumentIsComplete)
+            <div class="col-md-10">
+                @Html.CheckBoxFor(m => m.Customer.DocumentIsComplete, new { @class = " form-check-input", @id = "exampleCheck1" })
+                @Html.LabelFor(m => m.Customer.DocumentIsComplete, new { @class = "form-check-label" })
+            </div>
+            <div>
+                @Html.HiddenFor(m => m.Customer.Id)
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+
+        </div>
+
+
+    </div>
+}
